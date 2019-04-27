@@ -239,9 +239,9 @@ extension UIView
             let anim = CAKeyframeAnimation(keyPath: "transform")
             anim.duration = duration
             anim.values = transforms[idx]
-            anim.calculationMode = kCAAnimationDiscrete
+            anim.calculationMode = CAAnimationCalculationMode.discrete
             anim.isRemovedOnCompletion = false
-            anim.fillMode = kCAFillModeForwards
+            anim.fillMode = CAMediaTimingFillMode.forwards
             layer.add(anim, forKey: "transform")
         }
         CATransaction.commit()
